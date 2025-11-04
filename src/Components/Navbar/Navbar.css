@@ -1,0 +1,133 @@
+:root {
+  --bg: #0f172a;
+  --bg-soft: #111c33;
+  --card: #0f1f3a;
+  --card-alt: #111f3f;
+  --accent: #6366f1;
+  --accent-soft: rgba(99, 102, 241, 0.16);
+  --accent-secondary: #22d3ee;
+  --text: #f8fafc;
+  --muted: #94a3b8;
+  --border: rgba(148, 163, 184, 0.12);
+  --shadow: 0 24px 48px rgba(15, 23, 42, 0.35);
+  --radius-lg: 28px;
+  --radius-md: 18px;
+  --radius-sm: 12px;
+  --max-width: 1200px;
+  --transition: 200ms ease;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Manrope", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top left, rgba(99, 102, 241, 0.25), transparent 55%), var(--bg);
+  color: var(--text);
+  line-height: 1.55;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--accent-secondary);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  width: min(96%, var(--max-width));
+  margin: 0 auto;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.top-nav {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  backdrop-filter: blur(18px);
+  background: rgba(15, 23, 42, 0.82);
+  border-bottom: 1px solid rgba(99, 102, 241, 0.15);
+}
+
+.nav-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  gap: 1.5rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.brand img {
+  width: 44px;
+  filter: drop-shadow(0 6px 15px rgba(34, 211, 238, 0.35));
+}
+
+.top-nav nav {
+  display: flex;
+  gap: 1.5rem;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.top-nav nav a {
+  position: relative;
+  padding: 0.25rem 0;
+}
+
+.top-nav nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.4rem;
+  width: 0;
+  height: 2px;
+  background: var(--accent-secondary);
+  transition: width var(--transition);
+}
+
+.top-nav nav a:hover::after,
+.top-nav nav a:focus-visible::after {
+  width: 100%;
+}
+
+.nav-cta {
+  border-radius: 999px;
+  padding: 0.65rem 1.4rem;
+  background: linear-gradient(135deg, var(--accent), var(--accent-secondary));
+  color: #0b1120;
+  font-weight: 600;
+  box-shadow: 0 12px 25px rgba(34, 211, 238, 0.3);
+  transition: transform var(--transition);
+}
+
+.nav-cta:hover {
+  transform: translateY(-2px);
+}

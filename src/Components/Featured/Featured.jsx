@@ -46,8 +46,12 @@ const Featured = () => {
 
 
           <div className="card-footer">
-            <a target="_blank" href="https://agreeable-pebble-0a5f3850f.3.azurestaticapps.net/" className="btn">View Demo</a>
-            <a href="#" className="btn">View Details</a>
+            {card.badge == "New" && (
+              <a target = "_blank" href="https://agreeable-pebble-0a5f3850f.3.azurestaticapps.net/" className='btn' >
+                  View Demo
+              </a>
+            )}
+            <a href="#" className="btn">View Details</a> 
           </div>
         </article>
       ))}

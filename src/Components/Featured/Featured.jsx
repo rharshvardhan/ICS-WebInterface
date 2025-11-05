@@ -51,6 +51,18 @@ const Featured = () => {
                   View Demo
               </a>
             )}
+
+            {card.badge =="Popular" && (
+              <a target = "_blank"  href="https://white-stone-0eafb560f.3.azurestaticapps.net/" className='btn'>
+                View Demo
+              </a>
+            )}
+
+            {card.badge == "AI Labs" && (
+              <a target='_blank' href='https://lmre-webapp.azurewebsites.net/' className='btn'>
+                View Demo
+              </a>
+            )}
             <a href="#" className="btn">View Details</a> 
           </div>
         </article>

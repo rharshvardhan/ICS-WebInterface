@@ -1,5 +1,6 @@
 import React from 'react'
-
+import { useState } from 'react'
+import "./Categories.css"
 const Categories = () => {
     const types = [
         "All",
@@ -12,19 +13,14 @@ const Categories = () => {
         "RegTech",
         "Data Platform"
     ]
+  const [activeIndex, setActiveIndex] = useState(null);
   return (
     <div>
-      <section class="categories" aria-label="Capability categories">
-      <div class="container category-strip">
-        <button type="button" class="chip active">All</button>
-        <button type="button" class="chip">Banking</button>
-        <button type="button" class="chip">Healthcare</button>
-        <button type="button" class="chip">Retail</button>
-        <button type="button" class="chip">Manufacturing</button>
-        <button type="button" class="chip">Customer Service</button>
-        <button type="button" class="chip">Security</button>
-        <button type="button" class="chip">RegTech</button>
-        <button type="button" class="chip">Data Platforms</button>
+      <section className="categories" aria-label="Capability categories">
+      <div className="container category-strip">
+        {types.map((item, idx)=>(
+           <button key={idx} type="button" className={activeIndex === idx ? "chip active" : "chip"} onClick={()=>(setActiveIndex(idx))}>{item}</button>
+        ))}
       </div>
     </section>
     </div>

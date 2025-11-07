@@ -1,0 +1,39 @@
+partners {
+  padding: 4.5rem 0;
+}
+
+.partners-content {
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  align-items: center;
+}
+
+.partners-copy ul {
+  margin: 1.5rem 0 2rem;
+  padding-left: 1.1rem;
+  color: #dbe4f5;
+}
+
+.partners-copy ul li {
+  margin-bottom: 0.75rem;
+}
+
+.partners-showcase {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+}
+
+.logo-tile {
+  display: grid;
+  place-items: center;
+  padding: 1.8rem 1rem;
+  border-radius: var(--radius-sm);
+  background: rgba(12, 22, 44, 0.8);
+  border: 1px solid rgba(99, 102, 241, 0.1);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}

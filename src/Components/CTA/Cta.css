@@ -1,0 +1,53 @@
+.cta {
+  padding: 5rem 0;
+}
+
+.cta-content {
+  display: grid;
+  gap: 2.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  align-items: center;
+  padding: 3rem;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.18), rgba(34, 211, 238, 0.12));
+  border: 1px solid rgba(99, 102, 241, 0.35);
+  box-shadow: 0 30px 55px rgba(15, 23, 42, 0.45);
+}
+
+.cta-content h2 {
+  margin-top: 0;
+  font-size: clamp(2rem, 3vw, 2.8rem);
+}
+
+.cta-content p {
+  color: var(--muted);
+  margin-bottom: 0;
+}
+
+.cta-form {
+  display: grid;
+  gap: 1rem;
+}
+
+.cta-form input {
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  background: rgba(12, 22, 44, 0.8);
+  color: var(--text);
+}
+
+.cta-form button {
+  padding: 0.85rem 1.4rem;
+  border-radius: var(--radius-sm);
+  border: none;
+  background: linear-gradient(135deg, var(--accent), var(--accent-secondary));
+  color: #0b1120;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform var(--transition);
+}
+
+.cta-form button:hover {
+  transform: translateY(-1px);
+}

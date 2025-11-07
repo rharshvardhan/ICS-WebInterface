@@ -1,0 +1,35 @@
+.stories {
+  padding: 4.5rem 0;
+}
+
+.stories-grid {
+  display: grid;
+  gap: 1.8rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.story {
+  padding: 2rem;
+  border-radius: var(--radius-md);
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.9), rgba(17, 31, 63, 0.75));
+  border: 1px solid rgba(99, 102, 241, 0.16);
+}
+
+.story h3 {
+  margin-top: 0;
+  margin-bottom: 0.9rem;
+}
+
+.story p {
+  margin: 0 0 1.4rem;
+  color: var(--muted);
+}
+
+.link {
+  color: var(--accent-secondary);
+  font-weight: 600;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
